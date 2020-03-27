@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content %}
+		<section class="ftco-section" id="skills-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Manish Skills</h1>
+            <h2 class="mb-4">My Skills</h2>
+            {% comment %} <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> {% endcomment %}
+          </div>
+        </div>
+				<div class="row">
+					{% for skill in skills  %}
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>{{skill.title}}</h3>
+							<div class="progress shadow">
+							 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="{{skill.percentage}}"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:{{skill.percentage}}%">
+							    <span>{{skill.percentage}}%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+ 
+{% endblock main_content %}

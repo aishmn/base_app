@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block main_content %}
+<section class="ftco-about img ftco-section ftco-no-pb pt-5 mt-4" id="about-section">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="card p-5">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="{{blog.image.url}}" alt="Card image cap" height="500px">
+                     <div class="card-body">
+                         <h5 class="card-title text-dark">{{blog.title}}</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main_content %}
+
